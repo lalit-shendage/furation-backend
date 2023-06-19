@@ -1,16 +1,24 @@
+require("dotenv").config();
+const mongoose = require("mongoose");
 
-const mongoose = require('mongoose');
-user=process.env.mongoURI
+const user=process.env.USER;
 
-const connectDB = async () => {
+const connectDB = async (logger) => {
   try {
-    await mongoose.connect(`mongodb+srv://Lalit:123@cluster0.dwnwv8t.mongodb.net/furation-backend`, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });  
-    console.log('Connected to MongoDB');
+    // trying to connect with database
+    await mongoose.connect(
+      `mongodb+srv://${user}@cluster0.dwnwv8t.mongodb.net/furation-backend`,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
+    logger.info("Connected to MongoDB");
+    console.log("Connected to MongoDB");
   } catch (error) {
-    console.error('Failed to connect to MongoDB', error);
+    // error
+    logger.error("Failed to connect to MongoDB", error);
+    console.error("Failed to connect to MongoDB", error);
     process.exit(1);
   }
 };
