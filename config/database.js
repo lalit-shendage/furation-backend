@@ -4,7 +4,7 @@ user=process.env.mongoURI
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(`mongodb://localhost:27017/furaction-backend`, {
+    await mongoose.connect(`mongodb+srv://Lalit:123@cluster0.dwnwv8t.mongodb.net/furation-backend`, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });  
