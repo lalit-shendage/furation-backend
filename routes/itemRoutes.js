@@ -6,4 +6,10 @@ const { verifyToken } = require('../middleware/validationMiddleware');
 router.get('/',verifyToken, itemController.fetchAllItems);
 router.get('/:id',verifyToken, itemController.fetchItemById);
 
+router.post('/',verifyToken, itemController.createItem);
+
+router.put('/:id', verifyToken, itemController.updateItem);
+
+router.delete('/:id', verifyToken, itemController.deleteItem)
+
 module.exports = router;
