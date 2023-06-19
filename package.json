@@ -1,0 +1,15 @@
+{
+  "name": "furation-backend",
+  "version": "1.0.0",
+  "description": "rest api app for furation backend assesment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lalit Shendage",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.3.0"
+  }
+}
