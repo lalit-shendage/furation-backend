@@ -1,7 +1,7 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-const user=process.env.USER;
+const user = process.env.USER;
 
 const connectDB = async (logger) => {
   try {

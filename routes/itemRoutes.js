@@ -1,18 +1,24 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const itemController = require('../controllers/itemController');
-const { verifyToken } = require('../middleware/validationMiddleware');
+const itemController = require("../controllers/itemController");
+const { verifyToken } = require("../middleware/validationMiddleware");
 
-router.get('/', verifyToken, itemController.fetchAllItems);
+// fetching all items
+router.get("/", verifyToken, itemController.fetchAllItems);
 
-router.get('/:page/:limit', verifyToken, itemController.fetchAllItemsPage);
+// fetching items by page and page limit
+router.get("/:page/:limit", verifyToken, itemController.fetchAllItemsPage);
 
-router.get('/:id', verifyToken, itemController.fetchItemById);
+// fetching item by id
+router.get("/:id", verifyToken, itemController.fetchItemById);
 
-router.post('/',verifyToken, itemController.createItem);
+// creating item
+router.post("/", verifyToken, itemController.createItem);
 
-router.put('/:id', verifyToken, itemController.updateItem);
+// Updating item
+router.put("/:id", verifyToken, itemController.updateItem);
 
-router.delete('/:id', verifyToken, itemController.deleteItem)
+// deleting item
+router.delete("/:id", verifyToken, itemController.deleteItem);
 
 module.exports = router;
