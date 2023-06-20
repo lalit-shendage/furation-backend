@@ -182,8 +182,12 @@ npm start
 
 #### Manual test using postman
 
+** To test hosted APIs please import collection named 'Postman collection-web in Postman**
+
+** To check app working in local machine**
+
 1. Start the application
-2. Open Postman and import the provided collection file
+2. Open Postman and import the provided collection file named *Postman collection- Local machine*
 3. The collection includes pre-configured requests for each API endpoint. You can send requests to the corresponding endpoints and examine the responses.
 
 **Note**: Make sure to update the request URLs and data as needed based on your local environment and specific API configurations.

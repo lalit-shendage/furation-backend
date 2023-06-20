@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "44dab714-4db5-4f3a-a12f-9fdde25958a5",
-		"name": "furation-backend",
+		"name": "furation-backend -local machine",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26585164"
 	},
@@ -22,7 +22,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"1\",\r\n    \"email\":\"123@1.com\",\r\n    \"password\":\"123\"\r\n}"
+							"raw": "{\r\n    \"name\":\"2\",\r\n    \"email\":\"wssddeed1\",\r\n    \"password\":\"123\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:5000/api/register",
@@ -42,8 +42,30 @@
 				{
 					"name": "login",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"123@1.com\",\r\n    \"password\":\"123\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
 					},
 					"response": []
 				}
@@ -64,7 +86,7 @@
 							},
 							{
 								"key": "auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkwNWI2ZGJhMjFhYWM2ZjZmOThmZjIiLCJpYXQiOjE2ODcxODIyNzF9.9-6TekFVkVW5wt3QLuiyY9dmSqBBVP_kXnbURTwUy1U",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkwNWI2ZGJhMjFhYWM2ZjZmOThmZjIiLCJpYXQiOjE2ODcxODYyNzV9.ON_yAzcOI0YFzp0tG-z0RPSw8uH66pOyBA15A6DeaC0",
 								"type": "text"
 							}
 						],
@@ -101,7 +123,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5000/api/items/",
+							"raw": "http://localhost:5000/api/items/page?page=2&limit=2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -110,7 +132,17 @@
 							"path": [
 								"api",
 								"items",
-								""
+								"page"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
 							]
 						}
 					},
@@ -128,7 +160,7 @@
 							},
 							{
 								"key": "auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkwNWI2ZGJhMjFhYWM2ZjZmOThmZjIiLCJpYXQiOjE2ODcxODIyNzF9.9-6TekFVkVW5wt3QLuiyY9dmSqBBVP_kXnbURTwUy1U",
+								"value": "eyJhbGciOiJIUR5cCI6IkpXVCJ9.-6TekFVkVW5wt3QLuiyY9dmSqBBVP_kXnbURTwUy1U",
 								"type": "text"
 							}
 						],
@@ -166,7 +198,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \r\n}"
+							"raw": "{\r\n    \"title\":\"ghost in the city\",\r\n    \"language\":\"japneese\",\r\n    \"pages\":201,\r\n    \"author\":\"P S kito\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:5000/api/items/",

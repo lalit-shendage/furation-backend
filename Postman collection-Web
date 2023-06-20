@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "2770cdf2-3f0b-4f60-a044-e5ac11963a0a",
+		"name": "furation-backend -web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26585164"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"2\",\r\n    \"email\":\"wssddeed1@gmail.com\",\r\n    \"password\":\"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "https://furation-bakend.onrender.com/api/register",
+							"protocol": "https",
+							"host": [
+								"furation-bakend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"wssddeed1@gmail.com\",\r\n    \"password\":\"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "https://furation-bakend.onrender.com/api/login",
+							"protocol": "https",
+							"host": [
+								"furation-bakend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "item-api",
+			"item": [
+				{
+					"name": "Get All Items",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkxNjM3MGEzNTU3ZDQ5YThiNDkxZDMiLCJpYXQiOjE2ODcyNDk4MDV9.pj42M3p1ucmU0AvNebYkGoIXna5M5_jcLPQ1JeIXaZw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://furation-bakend.onrender.com/api/items",
+							"protocol": "https",
+							"host": [
+								"furation-bakend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkxNjM3MGEzNTU3ZDQ5YThiNDkxZDMiLCJpYXQiOjE2ODcyNDk4MDV9.pj42M3p1ucmU0AvNebYkGoIXna5M5_jcLPQ1JeIXaZw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"ghost in the city\",\r\n    \"language\":\"japneese\",\r\n    \"pages\":201,\r\n    \"author\":\"P S kito\"\r\n}"
+						},
+						"url": {
+							"raw": "https://furation-bakend.onrender.com/api/items",
+							"protocol": "https",
+							"host": [
+								"furation-bakend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get item by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkxNjM3MGEzNTU3ZDQ5YThiNDkxZDMiLCJpYXQiOjE2ODcyNDk4MDV9.pj42M3p1ucmU0AvNebYkGoIXna5M5_jcLPQ1JeIXaZw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://furation-bakend.onrender.com/api/items/649032efccd755cce0468bdf",
+							"protocol": "https",
+							"host": [
+								"furation-bakend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"items",
+								"649032efccd755cce0468bdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get item by id Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkxNjM3MGEzNTU3ZDQ5YThiNDkxZDMiLCJpYXQiOjE2ODcyNDk4MDV9.pj42M3p1ucmU0AvNebYkGoIXna5M5_jcLPQ1JeIXaZw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://furation-bakend.onrender.com/api/items/649032efccd755cce0468bdf",
+							"protocol": "https",
+							"host": [
+								"furation-bakend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"items",
+								"649032efccd755cce0468bdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Item",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkxNjM3MGEzNTU3ZDQ5YThiNDkxZDMiLCJpYXQiOjE2ODcyNDk4MDV9.pj42M3p1ucmU0AvNebYkGoIXna5M5_jcLPQ1JeIXaZw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"changed title1\"\r\n}"
+						},
+						"url": {
+							"raw": "https://furation-bakend.onrender.com/api/items/649032efccd755cce0468bdf",
+							"protocol": "https",
+							"host": [
+								"furation-bakend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"items",
+								"649032efccd755cce0468bdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get items by page and page limit",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkxNjM3MGEzNTU3ZDQ5YThiNDkxZDMiLCJpYXQiOjE2ODcyNDk4MDV9.pj42M3p1ucmU0AvNebYkGoIXna5M5_jcLPQ1JeIXaZw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://furation-bakend.onrender.com/api/items/649032efccd755cce0468bdf",
+							"protocol": "https",
+							"host": [
+								"furation-bakend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"items",
+								"649032efccd755cce0468bdf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
