@@ -7,7 +7,7 @@ const { verifyToken } = require("../middleware/validationMiddleware");
 router.get("/", verifyToken, itemController.fetchAllItems);
 
 // fetching items by page and page limit
-router.get("/:page/:limit", verifyToken, itemController.fetchAllItemsPage);
+router.get("/page", verifyToken, itemController.fetchAllItemsPage);
 
 // fetching item by id
 router.get("/:id", verifyToken, itemController.fetchItemById);

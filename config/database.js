@@ -1,13 +1,13 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-const user = process.env.USER;
+const cluster = process.env.CLUSTER;
 
 const connectDB = async (logger) => {
   try {
     // trying to connect with database
     await mongoose.connect(
-      `mongodb+srv://${user}@cluster0.dwnwv8t.mongodb.net/furation-backend`,
+      `mongodb+srv://${cluster}.mongodb.net/furation-backend`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,

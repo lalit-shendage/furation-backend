@@ -8,6 +8,7 @@ const verifyToken = async (req, res, next) => {
 
   // checking if token exist
   if (!token) {
+    
     logger.error("No token provided");
     return res.status(401).json({ message: "No token provided" });
   }

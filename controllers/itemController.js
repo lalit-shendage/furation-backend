@@ -34,7 +34,7 @@ const fetchAllItems = async (req, res) => {
 // 2. fetch items with page number and page limit
 const fetchAllItemsPage = async (req, res) => {
   try {
-    const { page, limit } = req.params;
+    const { page, limit } = req.query;
 
     const skipCount = (page - 1) * limit;
 
