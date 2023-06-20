@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "44dab714-4db5-4f3a-a12f-9fdde25958a5",
+		"name": "furation-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26585164"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"1\",\r\n    \"email\":\"123@1.com\",\r\n    \"password\":\"123\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "item-api",
+			"item": [
+				{
+					"name": "fetchAllItems",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkwNWI2ZGJhMjFhYWM2ZjZmOThmZjIiLCJpYXQiOjE2ODcxODIyNzF9.9-6TekFVkVW5wt3QLuiyY9dmSqBBVP_kXnbURTwUy1U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/items/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"items",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchAllItems by pagination",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkwNWI2ZGJhMjFhYWM2ZjZmOThmZjIiLCJpYXQiOjE2ODcxODIyNzF9.9-6TekFVkVW5wt3QLuiyY9dmSqBBVP_kXnbURTwUy1U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/items/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"items",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch items by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkwNWI2ZGJhMjFhYWM2ZjZmOThmZjIiLCJpYXQiOjE2ODcxODIyNzF9.9-6TekFVkVW5wt3QLuiyY9dmSqBBVP_kXnbURTwUy1U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/items/649032efccd755cce0468bde",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"items",
+								"649032efccd755cce0468bde"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkwNWI2ZGJhMjFhYWM2ZjZmOThmZjIiLCJpYXQiOjE2ODcxODIyNzF9.9-6TekFVkVW5wt3QLuiyY9dmSqBBVP_kXnbURTwUy1U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/items/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"items",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkwNWI2ZGJhMjFhYWM2ZjZmOThmZjIiLCJpYXQiOjE2ODcxODIyNzF9.9-6TekFVkVW5wt3QLuiyY9dmSqBBVP_kXnbURTwUy1U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"ghost in the city\",\r\n    \"language\":\"japneese\",\r\n    \"pages\":707,\r\n    \"author\":\"P S kito\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/items/64905cd6a008fd040466b716",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"items",
+								"64905cd6a008fd040466b716"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete item",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDkwNWI2ZGJhMjFhYWM2ZjZmOThmZjIiLCJpYXQiOjE2ODcxODIyNzF9.9-6TekFVkVW5wt3QLuiyY9dmSqBBVP_kXnbURTwUy1U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/items/64905cd6a008fd040466b716",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"items",
+								"64905cd6a008fd040466b716"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
